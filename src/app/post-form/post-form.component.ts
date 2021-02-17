@@ -1,6 +1,6 @@
 import { formatCurrency } from '@angular/common';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Form, NgForm } from '@angular/forms';
 import { Post } from '../interfaces/post';
 
 @Component({
@@ -10,7 +10,7 @@ import { Post } from '../interfaces/post';
 })
 export class PostFormComponent implements OnInit {
   @Output() submitted = new EventEmitter<Post>();
-
+  showForm = false;
   constructor() {}
 
   ngOnInit(): void {}

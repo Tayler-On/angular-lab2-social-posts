@@ -1,12 +1,11 @@
 <div class="main-content">
   <header class="header">My Thoughts</header>
-  <button class="new-thought-btn">
-    <!-- (was inside button) (click)="onShowForm()"
-    (onClick)="showForm = !showForm" -->
-    New Thought
-  </button>
-  <app-post-form (submitted)="onSubmit($event)" class="add-form">
-    <!-- (was inside app-post-form) *ngIf="showForm" -->
+  <button class="new-thought-btn" (click)="onShowForm()">New Thought</button>
+  <app-post-form
+    *ngIf="showForm"
+    (submitted)="onSubmit($event)"
+    class="add-form"
+  >
   </app-post-form>
   <div class="post-container">
     <app-post

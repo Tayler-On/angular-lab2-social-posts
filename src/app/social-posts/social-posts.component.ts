@@ -7,7 +7,7 @@ import { Post } from '../interfaces/post';
   styleUrls: ['./social-posts.component.css'],
 })
 export class SocialPostsComponent implements OnInit {
-  // showForm = false;
+  showForm: boolean = false;
   myPosts: Post[] = [
     {
       title: 'Something about Tuesday',
@@ -23,15 +23,13 @@ export class SocialPostsComponent implements OnInit {
     },
   ];
 
-  // @Output() onClick = new EventEmitter<boolean>();
-
   constructor() {}
 
   ngOnInit(): void {}
 
-  // onShowForm = (): void => {
-  //   this.onClick.emit(true);
-  // };
+  onShowForm = (): void => {
+    this.showForm = !this.showForm;
+  };
 
   onDelete = (index: number): void => {
     this.myPosts.splice(index, 1);
@@ -39,5 +37,6 @@ export class SocialPostsComponent implements OnInit {
 
   onSubmit = (post: Post): void => {
     this.myPosts.unshift(post);
+    this.onShowForm();
   };
 }
