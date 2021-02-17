@@ -1,0 +1,19 @@
+<div class="main-content">
+  <header class="header">My Thoughts</header>
+  <button class="new-thought-btn">
+    <!-- (was inside button) (click)="onShowForm()"
+    (onClick)="showForm = !showForm" -->
+    New Thought
+  </button>
+  <app-post-form (submitted)="onSubmit($event)" class="add-form">
+    <!-- (was inside app-post-form) *ngIf="showForm" -->
+  </app-post-form>
+  <div class="post-container">
+    <app-post
+      *ngFor="let post of myPosts; index as i"
+      [postObject]="post"
+      (deleted)="onDelete(i)"
+      class="post"
+    ></app-post>
+  </div>
+</div>

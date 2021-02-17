@@ -1,0 +1,36 @@
+.add-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-form-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  background: #b1ddea;
+  border-radius: 5px;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+}
+.title,
+.thought {
+  margin-bottom: 5px;
+}
+
+.title-input,
+.thought-input,
+.add-btn {
+  border: 2px solid black;
+  margin-bottom: 5px;
+}
+.add-btn {
+  margin: 5px;
+  background: white;
+  padding: 5px;
+}
+.hidden {
+  display: none;
+}

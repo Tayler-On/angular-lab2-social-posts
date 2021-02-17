@@ -1,0 +1,20 @@
+.posts {
+  display: flex;
+  border-bottom: 2px solid #f3f1f7;
+  border-radius: 0px;
+}
+.post-content {
+  flex: 1;
+}
+.post-title {
+  font-weight: bolder;
+  font-size: 20px;
+}
+.post-thought {
+  font-size: 15px;
+}
+
+.delete {
+  border: none;
+  background-color: white;
+}
